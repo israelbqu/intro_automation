@@ -1,0 +1,132 @@
+{
+  "id": "7a594a5b-92ff-4895-bc0b-1d7df080d5a3",
+  "version": "2.0",
+  "name": "SongsSinatra",
+  "url": "https://evening-bastion-49392.herokuapp.com",
+  "tests": [{
+    "id": "bd3233d4-99fa-4952-a73c-827b462509a3",
+    "name": "loginSinatra",
+    "commands": [{
+      "id": "19ea5402-e236-44fb-a1d1-d219ca35c26d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe58c39b-de5c-4169-beb7-2baeea6015a1",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "linkText=log in",
+      "targets": [
+        ["linkText=log in", "linkText"],
+        ["css=footer > a", "css:finder"],
+        ["xpath=//a[contains(text(),'log in')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//footer/a", "xpath:position"],
+        ["xpath=//a[contains(.,'log in')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "3adecc09-2390-4519-8a14-d15a31cfd219",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=log in",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "180a38a1-6a7c-4110-b295-bff927404ceb",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=username",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f6756c0e-28ed-4200-b43e-ac2cff67d79d",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "frank"
+    }, {
+      "id": "3a36c5e3-a3a6-40c5-b9e4-7ee449cf31a3",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "sinatra"
+    }, {
+      "id": "355e0fc2-2d30-4fcc-8d9a-826c71c3985c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@value='Log In']",
+      "targets": [
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@value='Log In']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fcf0f545-d0e7-47dd-87d1-3c85839b528f",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.flash",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "fde7c52b-7380-426b-9627-f7c9e3fced91",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.flash",
+      "targets": [
+        ["css=.flash", "css:finder"],
+        ["xpath=//div[@id='flash']/div", "xpath:idRelative"],
+        ["xpath=//section/div/div", "xpath:position"]
+      ],
+      "value": "You are now logged in as frank"
+    }, {
+      "id": "121e0f48-5ee2-4299-a804-2302ed3b2e09",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Songs By Sinatra",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a258fd34-7570-4b5c-820b-bc1bf415fb2e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=log out",
+      "targets": [
+        ["linkText=log out", "linkText"],
+        ["css=footer > a", "css:finder"],
+        ["xpath=//a[contains(text(),'log out')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/logout')]", "xpath:href"],
+        ["xpath=//footer/a", "xpath:position"],
+        ["xpath=//a[contains(.,'log out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "91355340-ad8b-4cad-860a-e5e0c7421c3a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bd3233d4-99fa-4952-a73c-827b462509a3"]
+  }],
+  "urls": ["https://evening-bastion-49392.herokuapp.com/"],
+  "plugins": []
+}
